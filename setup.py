@@ -7,7 +7,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="punting",
-    version="0.0.1",
+    version="0.0.2",
     description="Basic racing related utilities",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -21,7 +21,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.9",
     ],
-    packages=["punting","punting.onedime","punting.twodim"],
+    packages=["punting","punting.onedim","punting.twodim"],
     test_suite='pytest',
     tests_require=['pytest'],
     include_package_data=True,
