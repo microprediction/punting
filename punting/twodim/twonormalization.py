@@ -1,5 +1,5 @@
-from quinella.dimensions import to_flat_exacta,from_flat_exacta,to_flat_quinella, from_flat_quinella
-from quinella.normalization import to_normalized_dividends, to_normalized_probabilities
+from punting.twodim.twodimensions import to_flat_exacta,from_flat_exacta,to_flat_quinella, from_flat_quinella
+from punting.onedim.onenormalization import to_normalized_dividends, to_normalized_probabilities
 
 
 def to_normalized_quinella_probabilities(q,scr=-1):
