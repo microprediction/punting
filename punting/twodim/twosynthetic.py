@@ -1,8 +1,7 @@
-from quinella.normalization import normalize_probabilities, to_normalized_dividends
-from quinella.arraynormalization import to_normalized_quinella_dividends, to_normalized_exacta_dividends
-from quinella.harvilleexacta import harville_exacta_probabilities, harville_quinella_probabilities
-from quinella.dimensions import to_flat_exacta, to_flat_quinella, from_flat_exacta, from_flat_quinella
-from quinella.skewnormal import skew_normal_quinella
+from punting.onedim.onenormalization import normalize_probabilities, to_normalized_dividends
+from punting.twodim.twonormalization import to_normalized_quinella_dividends, to_normalized_exacta_dividends
+from punting.twodim.twoharville import harville_exacta_probabilities, harville_quinella_probabilities
+from punting.twodim.twodimensions import to_flat_exacta, to_flat_quinella, from_flat_exacta, from_flat_quinella
 import numpy as np
 import math
 
@@ -30,7 +29,6 @@ def random_harville_market(n, scr, p_scr=0.2):
     """
     market = dict()
     market['w_prob'] = random_win_probabilities(n, scr=scr, p_scr=p_scr)
-    market['q_implied'] = skew_normal_quinella(p=market['w_prob'])
     market['w_div'] = to_normalized_dividends( jiggle_win_probabilities( market['w_prob'], scr=scr ),scr=scr)
     market_x_prob = jiggle_exacta_probabilities( harville_exacta_probabilities(p=market['w_div'], scr=scr ),scr=scr )
     market_q_prob = jiggle_quinella_probabilities( harville_quinella_probabilities(p=market['w_div']), scr=scr)
