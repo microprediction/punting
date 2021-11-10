@@ -1,5 +1,5 @@
 import numpy as np
-from quinella.scratchings import scratch_win, unscratch_win
+from punting.onedim.onescratching import scratch_win, unscratch_win
 
 
 def normalize_probabilities(p,scr=-1):

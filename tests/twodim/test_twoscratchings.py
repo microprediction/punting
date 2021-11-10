@@ -1,8 +1,6 @@
 from punting.twodim.twoscratching import scratch_quinella, unscratch_quinella
 from punting.twodim.twodimensions import all_exacta_close
 
-
-
 def test_scratch_quinella():
     x = [[-1,2,3,-1],
          [2,-1,2,-1],
